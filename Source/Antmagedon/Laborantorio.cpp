@@ -1,29 +1,25 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "Edificio.h"
+#include "Laborantorio.h"
 
 // Sets default values
-AEdificio::AEdificio(int cc, int gc, int mhp) : clayCost(cc), grassCost(gc),
-maxHp(mhp), curHP(maxHp)
+ALaborantorio::ALaborantorio()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 }
-AEdificio::AEdificio() {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
-}
+
 // Called when the game starts or when spawned
-void AEdificio::BeginPlay()
+void ALaborantorio::BeginPlay()
 {
 	Super::BeginPlay();
 	
 }
 
 // Called every frame
-void AEdificio::Tick(float DeltaTime)
+void ALaborantorio::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 

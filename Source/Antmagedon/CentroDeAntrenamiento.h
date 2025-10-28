@@ -4,26 +4,24 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Edificio.generated.h"
+#include "CentroDeAntrenamiento.generated.h"
 
 UCLASS()
-class ANTMAGEDON_API AEdificio : public AActor
+class ANTMAGEDON_API ACentroDeAntrenamiento : public AActor
 {
 	GENERATED_BODY()
 	
-private:
-	int maxHp, curHP;
-	int clayCost, grassCost;
 public:	
 	// Sets default values for this actor's properties
-	AEdificio(int, int, int);
-	AEdificio();
+	ACentroDeAntrenamiento();
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 public:	
 	// Called every frame
+	//void OnClicked() override;
 	virtual void Tick(float DeltaTime) override;
-
+	void CrearGuerrero();
 };

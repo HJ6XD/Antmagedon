@@ -3,27 +3,25 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Edificio.h"
 #include "GameFramework/Actor.h"
-#include "Edificio.generated.h"
+#include "Antyuntamiento.generated.h"
 
 UCLASS()
-class ANTMAGEDON_API AEdificio : public AActor
+class ANTMAGEDON_API AAntyuntamiento : public AActor, public AEdificio
 {
 	GENERATED_BODY()
-	
-private:
-	int maxHp, curHP;
-	int clayCost, grassCost;
-public:	
+
+public:
 	// Sets default values for this actor's properties
-	AEdificio(int, int, int);
-	AEdificio();
+	AAntyuntamiento();
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+	void CrearObrero();
 };
