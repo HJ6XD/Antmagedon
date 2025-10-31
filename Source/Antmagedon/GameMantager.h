@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Personaje.h"
+#include "Hormiga.h"
 #include <vector>
 /**
  * 
@@ -13,8 +13,8 @@ class ANTMAGEDON_API GameMantager
 private:
 	//recursos
 	int clay, grass, space;
-	std::vector<APersonaje*>* obrerosList;
-	std::vector<APersonaje*>* guerrerosList;
+	std::vector<AHormiga*>* obrerosList;
+	std::vector<AHormiga*>* guerrerosList;
 
 	float timePassed{ 0 };
 

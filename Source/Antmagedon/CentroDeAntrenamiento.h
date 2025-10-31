@@ -2,12 +2,11 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
-#include "GameFramework/Actor.h"
+#include "Edificio.h"
 #include "CentroDeAntrenamiento.generated.h"
 
 UCLASS()
-class ANTMAGEDON_API ACentroDeAntrenamiento : public AActor
+class ANTMAGEDON_API ACentroDeAntrenamiento : public AEdificio
 {
 	GENERATED_BODY()
 	
