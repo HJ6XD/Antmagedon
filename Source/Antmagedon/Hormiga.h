@@ -44,5 +44,7 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void Caminar();
 	UFUNCTION(BlueprintCallable)
+	virtual void OnDead();
+	UFUNCTION(BlueprintCallable)
 	void RecibirDanio(int _dmg);
 };

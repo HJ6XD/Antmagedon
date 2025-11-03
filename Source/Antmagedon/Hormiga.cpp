@@ -45,6 +45,9 @@ void AHormiga::Caminar()
 {
 	//logica para que camine hacia myPath->at(curTile);
 }
+void AHormiga::OnDead()
+{
+}
 void AHormiga::ChangeDirection()
 {
 	pathIndex += 1;
@@ -59,6 +62,6 @@ void AHormiga::RecibirDanio(int _dmg)
 {
 	curHP -= _dmg;
 	if (curHP <= 0) {
-		//Cosas de que se muera
+		OnDead();
 	}
 }

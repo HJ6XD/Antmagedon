@@ -29,3 +29,13 @@ void AEdificio::Tick(float DeltaTime)
 
 }
 
+void AEdificio::OnClickBuilding()
+{
+	//Que aparesca el widget del edificio para hacer su cosa
+}
+
+void AEdificio::DoMyThing()
+{
+	//Depende el edificio, hará su acción
+}
+
