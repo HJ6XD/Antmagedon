@@ -43,7 +43,12 @@ void AHormiga::GetPath(TArray<FVector> _path)
 }
 void AHormiga::Caminar()
 {
-	//logica para que camine hacia myPath->at(curTile);
+	FVector dist = targetPos - GetActorLocation();
+	float len = sqrt((dist.X * dist.X) + (dist.Y * dist.Y));
+	if (len <= 100)
+	{
+		ChangeDirection();
+	}
 }
 void AHormiga::OnDead()
 {
@@ -52,10 +57,20 @@ void AHormiga::ChangeDirection()
 {
 	pathIndex += 1;
 	if (pathIndex == (myPath.GetAllocatedSize() - 1)) {
-		//logica de que se pare
+		myPath = TArray<FVector>();
+		pathIndex = 0;
+		OnReachTarget();
 		return;
 	}
 	targetPos = myPath[pathIndex];
+}
+
+void AHormiga::OnReachTarget()
+{
+}
+
+void AHormiga::StartWalking()
+{
 }
 
 void AHormiga::RecibirDanio(int _dmg)

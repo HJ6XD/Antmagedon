@@ -28,7 +28,20 @@ public:
 
 protected:
 	// Called when the game starts or when spawned
+	UFUNCTION(BlueprintCallable)
 	virtual void BeginPlay() override;
+
+	//UFUNCTION(BlueprintCallable)
+	void GetPath(TArray<FVector>);
+
+	UFUNCTION(BlueprintCallable)
+	void ChangeDirection();
+
+	UFUNCTION(BlueprintCallable)
+	virtual void OnReachTarget();
+
+	UFUNCTION(BlueprintCallable)
+	virtual void StartWalking();
 
 public:
 	// Called every frame
@@ -37,8 +50,7 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	void GetPath(TArray<FVector>);
-	void ChangeDirection();
+	
 
 	//Funciones de hormigas en general
 	UFUNCTION(BlueprintCallable)
