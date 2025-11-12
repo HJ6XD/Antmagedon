@@ -3,3 +3,10 @@
 
 #include "RTSGameManager.h"
 
+void ARTSGameManager::BlackAntKilled()
+{
+	--blackAntsLeft;
+	if (blackAntsLeft <= 0) {
+		WinGame();
+	}
+}

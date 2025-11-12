@@ -15,5 +15,18 @@ class ANTMAGEDON_API ARTSGameManager : public AGameModeBase
 	GENERATED_BODY()
 public:
 
-	UPROPERTY(BlueprintReadWrite) TArray<AActor*> selected;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<AActor*> selectedList;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) int blackAntsLeft;
+
+	UFUNCTION(BlueprintCallable)
+	void BlackAntKilled();
+
+protected:
+	UFUNCTION(BlueprintCallable)
+	virtual void WinGame(){}
+
+	UFUNCTION(BlueprintCallable)
+	virtual void LoseGame(){}
+
 };

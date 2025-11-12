@@ -23,5 +23,5 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	void CrearObrero();
 
-	void DoMyThing() override {}
+	//void DoMyThing() override {}
 };
