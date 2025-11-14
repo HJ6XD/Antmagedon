@@ -18,6 +18,11 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) TArray<AActor*> selectedList;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite) int blackAntsLeft;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) int GrassValue;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) int ClayValue;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) int curArmySize;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite) int maxArmySize;
+
 
 	UFUNCTION(BlueprintCallable)
 	void BlackAntKilled();

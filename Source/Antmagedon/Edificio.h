@@ -28,8 +28,6 @@ public:
 	AEdificio(int, int, int);
 	AEdificio();
 
-	UFUNCTION(BlueprintCallable)
-	virtual void Deselect(){}
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
