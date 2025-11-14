@@ -14,8 +14,8 @@ class ANTMAGEDON_API AHormiga : public ACharacter
 protected:
 
 	//Estadisticas
-	UPROPERTY(BlueprintReadWrite)	int maxHP;
-	UPROPERTY(BlueprintReadWrite)	int curHP;
+	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)	int maxHP;
+	UPROPERTY(BlueprintReadWrite, VisibleAnywhere)	int curHP;
 	UPROPERTY(BlueprintReadWrite)	float movementSpeed;
 
 	//Cosas para que camine
